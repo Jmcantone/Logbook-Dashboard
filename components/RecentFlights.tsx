@@ -16,27 +16,30 @@ interface RecentFlightsProps {
 export function RecentFlights({ flights }: RecentFlightsProps) {
   return (
     <div className="bg-navy-800 border border-navy-700 rounded-xl p-6 space-y-4">
-      <h3 className="text-lg font-semibold text-white">
-        🛫 Recent Flights
-      </h3>
-      <div className="overflow-x-auto">
+      <div className="flex items-center justify-between">
+        <h3 className="text-lg font-semibold text-white">
+          🛫 Vuelos
+        </h3>
+        <span className="text-xs text-slate-500">{flights.length} vuelos</span>
+      </div>
+      <div className="overflow-y-auto max-h-96 rounded-lg">
         <table className="w-full text-sm">
-          <thead>
+          <thead className="sticky top-0 bg-navy-800 z-10">
             <tr className="border-b border-navy-700">
-              <th className="text-left py-3 px-2 text-slate-400 font-medium">Date</th>
-              <th className="text-left py-3 px-2 text-slate-400 font-medium">Route</th>
-              <th className="text-left py-3 px-2 text-slate-400 font-medium">Aircraft</th>
-              <th className="text-left py-3 px-2 text-slate-400 font-medium">Duration</th>
-              <th className="text-left py-3 px-2 text-slate-400 font-medium">Function</th>
-              <th className="text-left py-3 px-2 text-slate-400 font-medium">Remarks</th>
+              <th className="text-left py-3 px-2 text-slate-400 font-medium">Fecha</th>
+              <th className="text-left py-3 px-2 text-slate-400 font-medium">Ruta</th>
+              <th className="text-left py-3 px-2 text-slate-400 font-medium">Aeronave</th>
+              <th className="text-left py-3 px-2 text-slate-400 font-medium">Duración</th>
+              <th className="text-left py-3 px-2 text-slate-400 font-medium">Función</th>
+              <th className="text-left py-3 px-2 text-slate-400 font-medium">Observaciones</th>
             </tr>
           </thead>
           <tbody>
             {flights.map((flight, i) => (
               <tr key={i} className="border-b border-navy-700/50 hover:bg-navy-700/30 transition-colors">
-                <td className="py-3 px-2 text-slate-300">{flight.date}</td>
-                <td className="py-3 px-2 text-white font-medium">{flight.route}</td>
-                <td className="py-3 px-2 text-slate-300">{flight.aircraft}</td>
+                <td className="py-3 px-2 text-slate-300 whitespace-nowrap">{flight.date}</td>
+                <td className="py-3 px-2 text-white font-medium whitespace-nowrap">{flight.route}</td>
+                <td className="py-3 px-2 text-slate-300 whitespace-nowrap">{flight.aircraft}</td>
                 <td className="py-3 px-2 text-slate-300">{flight.duration}</td>
                 <td className="py-3 px-2">
                   <span

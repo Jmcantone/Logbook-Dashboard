@@ -32,7 +32,7 @@ export function MonthlyChart({ data }: MonthlyChartProps) {
   return (
     <div className="bg-navy-800 border border-navy-700 rounded-xl p-6 space-y-4">
       <h3 className="text-lg font-semibold text-white">
-        📈 Monthly Activity
+        📈 Actividad Mensual
       </h3>
       <div className="h-72">
         <ResponsiveContainer width="100%" height="100%">

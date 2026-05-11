@@ -26,7 +26,7 @@ export function FunctionChart({ pic, dual, coPilot }: FunctionChartProps) {
   return (
     <div className="bg-navy-800 border border-navy-700 rounded-xl p-6 space-y-4">
       <h3 className="text-lg font-semibold text-white">
-        🧑‍✈️ Pilot Function Distribution
+        🧑‍✈️ Distribución de Función
       </h3>
       <div className="h-64">
         <ResponsiveContainer width="100%" height="100%">

@@ -1,11 +1,4 @@
-import { withAuth } from "next-auth/middleware";
-
-export default withAuth({
-  pages: {
-    signIn: "/login",
-  },
-});
-
+// Middleware disabled — public access
 export const config = {
-  matcher: ["/dashboard/:path*", "/api/sheets/:path*"],
+  matcher: [],
 };
