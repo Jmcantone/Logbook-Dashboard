@@ -28,10 +28,10 @@ function getBadgeColor(days: number | null): string {
 
 export function ValidityPanel({ items }: ValidityPanelProps) {
   return (
-    <div className="bg-navy-800 border border-navy-700 rounded-xl p-6 space-y-4">
+    <div className="bg-navy-800 border border-navy-700 rounded-xl p-4 sm:p-6 space-y-4">
       <div className="flex items-center gap-2">
         <Shield className="w-5 h-5 text-accent" />
-        <h3 className="text-lg font-semibold text-white">
+        <h3 className="text-base sm:text-lg font-semibold text-white">
           Licencias y Vigencia
         </h3>
       </div>

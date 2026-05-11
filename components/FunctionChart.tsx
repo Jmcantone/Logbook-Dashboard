@@ -24,11 +24,11 @@ export function FunctionChart({ pic, dual, coPilot }: FunctionChartProps) {
   ].filter((d) => d.value > 0);
 
   return (
-    <div className="bg-navy-800 border border-navy-700 rounded-xl p-6 space-y-4">
-      <h3 className="text-lg font-semibold text-white">
+    <div className="bg-navy-800 border border-navy-700 rounded-xl p-4 sm:p-6 space-y-4">
+      <h3 className="text-base sm:text-lg font-semibold text-white">
         🧑‍✈️ Distribución de Función
       </h3>
-      <div className="h-64">
+      <div className="h-56 sm:h-64">
         <ResponsiveContainer width="100%" height="100%">
           <PieChart>
             <Pie

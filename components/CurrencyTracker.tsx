@@ -60,8 +60,8 @@ export function CurrencyTracker({
   ];
 
   return (
-    <div className="bg-navy-800 border border-navy-700 rounded-xl p-6 space-y-4">
-      <h3 className="text-lg font-semibold text-white">
+    <div className="bg-navy-800 border border-navy-700 rounded-xl p-4 sm:p-6 space-y-4">
+      <h3 className="text-base sm:text-lg font-semibold text-white">
         ⏱️ Vigencia y Recencia
       </h3>
       <div className="space-y-3">
@@ -82,16 +82,16 @@ export function CurrencyTracker({
           return (
             <div
               key={i}
-              className="flex items-center justify-between p-3 bg-navy-900/50 rounded-lg"
+              className="flex flex-col sm:flex-row sm:items-center justify-between p-3 bg-navy-900/50 rounded-lg gap-2"
             >
               <div className="flex items-center gap-3">
-                <Icon className={`w-5 h-5 ${color}`} />
+                <Icon className={`w-5 h-5 ${color} shrink-0`} />
                 <div>
                   <p className="text-white text-sm font-medium">{item.label}</p>
                   <p className="text-slate-500 text-xs">{item.detail}</p>
                 </div>
               </div>
-              <span className={`text-sm font-mono font-medium ${color}`}>
+              <span className={`text-sm font-mono font-medium ${color} sm:text-right pl-8 sm:pl-0`}>
                 {item.value}
               </span>
             </div>

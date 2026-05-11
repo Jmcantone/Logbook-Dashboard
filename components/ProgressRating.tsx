@@ -27,8 +27,8 @@ function formatMinutes(minutes: number): string {
 
 export function ProgressRating({ title, emoji, items }: ProgressRatingProps) {
   return (
-    <div className="bg-navy-800 border border-navy-700 rounded-xl p-6 space-y-4">
-      <h3 className="text-lg font-semibold text-white">
+    <div className="bg-navy-800 border border-navy-700 rounded-xl p-4 sm:p-6 space-y-4">
+      <h3 className="text-base sm:text-lg font-semibold text-white">
         {emoji} {title}
       </h3>
       <div className="space-y-4">
@@ -39,10 +39,10 @@ export function ProgressRating({ title, emoji, items }: ProgressRatingProps) {
 
           return (
             <div key={i} className="space-y-2">
-              <div className="flex items-center justify-between text-sm">
+              <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1 text-sm">
                 <span className="text-slate-300">{item.label}</span>
                 <div className="flex items-center gap-2">
-                  <span className="text-slate-400">
+                  <span className="text-slate-400 text-xs sm:text-sm">
                     {formatMinutes(item.current)} / {formatMinutes(item.required)}
                   </span>
                   <span className={`px-2 py-0.5 rounded text-xs font-medium ${status.color}`}>

@@ -35,11 +35,11 @@ export function AerodromeMap({ visits }: AerodromeMapProps) {
     .filter(Boolean) as Aerodrome[];
 
   return (
-    <div className="bg-navy-800 border border-navy-700 rounded-xl p-6 space-y-4">
-      <h3 className="text-lg font-semibold text-white">
+    <div className="bg-navy-800 border border-navy-700 rounded-xl p-4 sm:p-6 space-y-4">
+      <h3 className="text-base sm:text-lg font-semibold text-white">
         🗺️ Aeródromos Visitados
       </h3>
-      <div className="relative w-full h-80 rounded-lg overflow-hidden">
+      <div className="relative w-full h-60 sm:h-80 rounded-lg overflow-hidden">
         <MapContent aerodromes={aerodromes} />
       </div>
       {/* List below */}

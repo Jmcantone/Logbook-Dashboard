@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { Clock, Navigation, Plane, ArrowDownToLine } from "lucide-react";
+import { Clock, Navigation, Plane, ArrowDownToLine, BarChart3, Target, MapPin } from "lucide-react";
 import { KPICard } from "@/components/KPICard";
 import { ProgressRating } from "@/components/ProgressRating";
 import { MonthlyChart } from "@/components/MonthlyChart";
@@ -66,10 +66,10 @@ interface DashboardData {
 }
 
 const TABS = [
-  { id: "overview", label: "Resumen", emoji: "📊" },
-  { id: "planner", label: "Planificación", emoji: "🎯" },
-  { id: "flights", label: "Vuelos", emoji: "🛫" },
-  { id: "map", label: "Mapa & Aeronaves", emoji: "🗺️" },
+  { id: "overview", label: "Resumen", icon: BarChart3 },
+  { id: "planner", label: "Planificación", icon: Target },
+  { id: "flights", label: "Vuelos", icon: Plane },
+  { id: "map", label: "Mapa & Aeronaves", icon: MapPin },
 ];
 
 export default function DashboardPage() {
@@ -204,16 +204,14 @@ export default function DashboardPage() {
     <div className="min-h-screen bg-navy-900 p-4 md:p-8">
       <div className="max-w-7xl mx-auto space-y-6">
         {/* Header */}
-        <div className="flex items-center justify-between">
-          <div>
-            <h1 className="text-2xl font-bold text-white flex items-center gap-2">
-              <Plane className="w-6 h-6 text-accent" />
-              Flight Logbook
-            </h1>
-            <p className="text-slate-400 text-sm mt-1">
-              Juan Manuel Cantone Guzman · PPL(A) · ESP.FCL.00114944
-            </p>
-          </div>
+        <div>
+          <h1 className="text-xl sm:text-2xl font-bold text-white flex items-center gap-2">
+            <Plane className="w-5 h-5 sm:w-6 sm:h-6 text-accent" />
+            Flight Logbook
+          </h1>
+          <p className="text-slate-400 text-xs sm:text-sm mt-1">
+            Juan Manuel Cantone Guzman · PPL(A) · ESP.FCL.00114944
+          </p>
         </div>
 
         {/* Tabs */}
@@ -222,7 +220,7 @@ export default function DashboardPage() {
         {/* TAB: Overview */}
         {activeTab === "overview" && (
           <div className="space-y-6">
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
               <KPICard title="Horas Totales" value={formatTime(totalMinutes)} icon={Clock} subtitle="Tiempo total de vuelo" />
               <KPICard title="Horas PIC" value={formatTime(picMinutes)} icon={Plane} subtitle="Piloto al Mando" />
               <KPICard title="Cross-Country" value={formatTime(xCountryMinutes)} icon={Navigation} subtitle="Dep ≠ Arr" />

@@ -64,8 +64,8 @@ export function CPLEstimator({
   }
 
   return (
-    <div className="bg-navy-800 border border-navy-700 rounded-xl p-6 space-y-6">
-      <h3 className="text-lg font-semibold text-white">
+    <div className="bg-navy-800 border border-navy-700 rounded-xl p-4 sm:p-6 space-y-6">
+      <h3 className="text-base sm:text-lg font-semibold text-white">
         🎯 Planificador CPL
       </h3>
 
@@ -103,7 +103,7 @@ export function CPLEstimator({
       </div>
 
       {/* Results */}
-      <div className="grid grid-cols-1 sm:grid-cols-4 gap-4">
+      <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4">
         <div className="p-4 bg-navy-900/50 rounded-lg text-center">
           <p className="text-slate-400 text-xs mb-1">Horas restantes</p>
           <p className="text-2xl font-bold text-white">{formatTime(bottleneck.remaining)}</p>

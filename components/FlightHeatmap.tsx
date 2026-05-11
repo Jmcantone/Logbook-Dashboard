@@ -208,13 +208,13 @@ export function FlightHeatmap({ flightDates }: FlightHeatmapProps) {
 
   function renderWeek() {
     return (
-      <div className="grid grid-cols-7 gap-2">
+      <div className="grid grid-cols-7 gap-1 sm:gap-2">
         {days.map((day, i) => {
           const isToday = day.date.toDateString() === now.toDateString();
           return (
             <div
               key={day.key}
-              className={`p-3 rounded-lg text-center border ${
+              className={`p-2 sm:p-3 rounded-lg text-center border ${
                 day.count > 0
                   ? "border-accent/40 bg-accent/20"
                   : isToday
@@ -222,12 +222,12 @@ export function FlightHeatmap({ flightDates }: FlightHeatmapProps) {
                   : "border-navy-700/50 bg-navy-900/50"
               }`}
             >
-              <p className="text-xs text-slate-500">{DAY_LABELS[i]}</p>
-              <p className={`text-lg font-bold ${day.count > 0 ? "text-accent" : "text-slate-400"}`}>
+              <p className="text-[10px] sm:text-xs text-slate-500">{DAY_LABELS[i]}</p>
+              <p className={`text-sm sm:text-lg font-bold ${day.count > 0 ? "text-accent" : "text-slate-400"}`}>
                 {day.date.getDate()}
               </p>
               {day.count > 0 && (
-                <p className="text-xs text-accent mt-1">{day.count} ✈️</p>
+                <p className="text-[10px] sm:text-xs text-accent mt-0.5">{day.count} ✈️</p>
               )}
             </div>
           );
@@ -237,7 +237,7 @@ export function FlightHeatmap({ flightDates }: FlightHeatmapProps) {
   }
 
   return (
-    <div className="bg-navy-800 border border-navy-700 rounded-xl p-6 space-y-4">
+    <div className="bg-navy-800 border border-navy-700 rounded-xl p-4 sm:p-6 space-y-4">
       {/* Header with controls */}
       <div className="flex items-center justify-between flex-wrap gap-3">
         <h3 className="text-lg font-semibold text-white">📅 Actividad de Vuelo</h3>

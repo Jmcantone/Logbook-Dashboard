@@ -16,9 +16,9 @@ interface AircraftTableProps {
 
 export function AircraftTable({ aircraft }: AircraftTableProps) {
   return (
-    <div className="bg-navy-800 border border-navy-700 rounded-xl p-6 space-y-4">
+    <div className="bg-navy-800 border border-navy-700 rounded-xl p-4 sm:p-6 space-y-4">
       <div className="flex items-center justify-between">
-        <h3 className="text-lg font-semibold text-white">
+        <h3 className="text-base sm:text-lg font-semibold text-white">
           ✈️ Aeronaves Voladas
         </h3>
         <span className="text-xs text-slate-500">{aircraft.length} aeronaves</span>

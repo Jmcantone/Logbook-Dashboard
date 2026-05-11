@@ -65,8 +65,8 @@ export function FlightStats({ flights }: FlightStatsProps) {
 
   return (
     <div className="space-y-4">
-      <div className="bg-navy-800 border border-navy-700 rounded-xl p-6 space-y-4">
-        <h3 className="text-lg font-semibold text-white">📊 Estadísticas de Vuelo</h3>
+      <div className="bg-navy-800 border border-navy-700 rounded-xl p-4 sm:p-6 space-y-4">
+        <h3 className="text-base sm:text-lg font-semibold text-white">📊 Estadísticas de Vuelo</h3>
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
           <div className="p-3 bg-navy-900/50 rounded-lg text-center">
             <p className="text-slate-400 text-xs">Duración promedio</p>
@@ -98,8 +98,8 @@ export function FlightStats({ flights }: FlightStatsProps) {
         </div>
       </div>
 
-      <div className="bg-navy-800 border border-navy-700 rounded-xl p-6 space-y-4">
-        <h3 className="text-lg font-semibold text-white">📆 Vuelos por Día de la Semana</h3>
+      <div className="bg-navy-800 border border-navy-700 rounded-xl p-4 sm:p-6 space-y-4">
+        <h3 className="text-base sm:text-lg font-semibold text-white">📆 Vuelos por Día de la Semana</h3>
         <div className="h-48">
           <ResponsiveContainer width="100%" height="100%">
             <BarChart data={dayData}>

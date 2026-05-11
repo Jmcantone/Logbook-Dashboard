@@ -30,11 +30,11 @@ function formatHours(minutes: number): string {
 
 export function MonthlyChart({ data }: MonthlyChartProps) {
   return (
-    <div className="bg-navy-800 border border-navy-700 rounded-xl p-6 space-y-4">
-      <h3 className="text-lg font-semibold text-white">
+    <div className="bg-navy-800 border border-navy-700 rounded-xl p-4 sm:p-6 space-y-4">
+      <h3 className="text-base sm:text-lg font-semibold text-white">
         📈 Actividad Mensual
       </h3>
-      <div className="h-72">
+      <div className="h-56 sm:h-72">
         <ResponsiveContainer width="100%" height="100%">
           <BarChart data={data} margin={{ top: 5, right: 20, left: 0, bottom: 5 }}>
             <CartesianGrid strokeDasharray="3 3" stroke="#334155" />
